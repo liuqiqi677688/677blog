@@ -167,9 +167,12 @@ const vitePressOptions = {
 //     </div>
         footer: {
             // 版权前显示的信息
-            message: ` 总访问量 <span id="busuanzi_value_site_pv">--</span> 次
-                        <img src="heart.gif" alt="heart" width="10" height="10" />
-                        访客数 <span id="busuanzi_value_site_uv">--</span> 人次 `,
+            message: ` <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
+                            总访问量 <span id="busuanzi_value_site_pv">--</span> 次
+                            <img src="heart.gif" alt="heart" width="10" height="10" />
+                            访客数 <span id="busuanzi_value_site_uv">--</span> 人次 
+                        </div> 
+                     `,
             // 实际的版权文本
             copyright: `Copyright © 2025 677. All Rights Reserved.`
         },
