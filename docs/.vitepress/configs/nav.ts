@@ -9,24 +9,13 @@ import type {DefaultTheme} from 'vitepress'
  * activeMatch 当前页面位于匹配路径下时，导航菜单项将突出显示
  * noIcon 如果不喜欢外部链接，有个箭头↗ 图标，可以选择关闭
  */
-export const nav: DefaultTheme.Config['nav'] = [
-    // {text: '首页', link: '/'},
-    // {
-    //     text: 'vitepress',
-    //     activeMatch: "/vitepress/",
-    //     items: [
-    //         {text: 'vitepress使用', link: '/vitepress/vitepress使用'},
-    //         {text: 'markdown语法扩展', link: '/vitepress/markdown语法扩展'},
-    //         {text: 'frontmatter说明', link: '/vitepress/frontmatter说明'}
-    //     ]
-    // },
-    // {
-    //     text: 'markdown',
-    //     activeMatch: "/markdown/",
-    //     items: [
-    //         {text: 'markdown语法', link: '/markdown/markdown语法'},
-    //     ]
-    // },
-]
+export const nav: DefaultTheme.Config['nav'] =
+    [
+        {text: "首页", link: "/"},
+        {text: "清单", link: "/articleOverview"},
+        {text: "分类", link: "/categories"},
+        {text: "标签", link: "/tags"},
+        {text: "归档", link: "/archives"},
+    ]
 
 

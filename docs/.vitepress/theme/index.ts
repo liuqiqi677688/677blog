@@ -1,62 +1,25 @@
-// https://vitepress.dev/guide/custom-theme
-import DefaultTheme from 'vitepress/theme'
-import './style/index.css'
-import {useRoute} from 'vitepress';
-import {inBrowser} from 'vitepress'
-import {onMounted, watch, nextTick} from 'vue';
-//
-import busuanzi from 'busuanzi.pure.js'
-import DataPanel from "./components/DataPanel.vue"
-import ArticleMetadata from './components/ArticleMetadata.vue';
-import Xgplayer from './components/Xgplayer.vue';
-import HomeUnderline from './components/HomeUnderline.vue';
-import Linkcard from './components/Linkcard.vue';
-//
-import MyLayout from './components/MyLayout.vue'
-//
-import mediumZoom from 'medium-zoom';
-// 进度条组件
-import {NProgress} from 'nprogress-v2/dist/index.js'
+import Teek from "vitepress-theme-teek";
+import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
 
+// Teek 在线主题包引用（需安装 Teek 在线版本）
+import "vitepress-theme-teek/index.css";
+import "vitepress-theme-teek/theme-chalk/tk-code-block-mobile.css"; // 移动端代码块样式优化
+import "vitepress-theme-teek/theme-chalk/tk-sidebar.css"; // 侧边栏优化
+import "vitepress-theme-teek/theme-chalk/tk-nav.css"; // 导航栏优化
+import "vitepress-theme-teek/theme-chalk/tk-aside.css"; // 右侧目栏录文字悬停和激活样式
+import "vitepress-theme-teek/theme-chalk/tk-doc-h1-gradient.css"; // 一级标题渐变色
+import "vitepress-theme-teek/theme-chalk/tk-table.css"; // 表格样式调整，去掉单元格之间的线条
+import "vitepress-theme-teek/theme-chalk/tk-mark.css"; // <mark></mark> 样式
+import "vitepress-theme-teek/theme-chalk/tk-blockquote.css"; // > 引用块样式
+import "vitepress-theme-teek/theme-chalk/tk-index-rainbow.css"; // 首页图片彩虹动画
+import "vitepress-theme-teek/theme-chalk/tk-banner-desc-gradient.css"; // 博客风格 Banner 描述渐变样式
+import "vitepress-theme-teek/theme-chalk/tk-home-card-hover.css"; // 首页卡片悬停效果
+import "vitepress-theme-teek/theme-chalk/tk-fade-up-animation.css"; // 首次加载的动画效果
 
-
+import "./styles/code-bg.scss";
+import "./styles/iframe.scss";
 
 export default {
-    extends: DefaultTheme,
-    Layout: MyLayout,
-
-    enhanceApp({app, router}) {
-        if (inBrowser) {
-            NProgress.configure({showSpinner: false})
-            router.onBeforeRouteChange = () => {
-                NProgress.start() // 开始进度条
-            }
-            router.onAfterRouteChanged = () => {
-                busuanzi.fetch()
-                NProgress.done() // 停止进度条
-            }
-        }
-
-        // 注册全局组件
-        app.component('DataPanel', DataPanel)
-        app.component('ArticleMetadata', ArticleMetadata)
-        app.component('xgplayer', Xgplayer)
-        app.component('HomeUnderline', HomeUnderline)
-        app.component('Linkcard', Linkcard)
-    },
-
-    setup() {
-        const route = useRoute();
-        const initZoom = () => {
-            // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
-            mediumZoom('.main img', {background: 'var(--vp-c-bg)'}); // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
-        };
-        onMounted(() => {
-            initZoom();
-        });
-        watch(
-            () => route.path,
-            () => nextTick(() => initZoom())
-        );
-    },
-}
+  extends: Teek,
+  Layout: TeekLayoutProvider,
+};

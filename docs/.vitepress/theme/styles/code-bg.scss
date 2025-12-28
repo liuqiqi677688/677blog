@@ -1,0 +1,12 @@
+:root {
+  --vp-code-block-bg: var(--tk-fill-color-light);
+}
+
+
+.VPContent.is-home {
+  .vp-doc {
+    > div {
+      padding: 0 32px 0 !important;
+    }
+  }
+}
