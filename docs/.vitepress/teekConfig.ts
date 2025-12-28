@@ -2,8 +2,8 @@ import {defineTeekConfig} from "vitepress-theme-teek/config";
 
 export const teekConfig = defineTeekConfig({
     teekTheme: true, // 是否启用 Teek 主题
-    teekHome: true, // 是否启用 Teek 的首页风格（博客风格），如果为 false，则还原到 VitePress 的默认首页
-    vpHome: false, // 是否启用 VitePress 首页风格，支持 teekHome 和 vpHome 同时存在
+    teekHome: false, // 是否启用 Teek 的首页风格（博客风格），如果为 false，则还原到 VitePress 的默认首页
+    vpHome: true, // 是否启用 VitePress 首页风格，支持 teekHome 和 vpHome 同时存在
     loading: false, // 页面加载 Loading 动画配置，如果为 boolean，则控制是否启用，如果为字符串，则指定加载 Loading 动画的文案
     homeCardListPosition: "right", // 首页卡片栏列表位置，当为 left 则在文章列表左侧，当为 right 则在文章列表右侧
     anchorScroll: true, // 是否启用锚点滚动功能，即阅读文章时，自动将 h1 ~ h6 标题添加到地址栏 # 后面
