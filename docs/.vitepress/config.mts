@@ -156,22 +156,20 @@ const vitePressOptions = {
          * 类型：Footer
          * 可以通过 frontmatter 进行覆盖。
          */
+//         <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
+//     <span>基于 VitePress 构建</span>
+//         <span>•</span>
+// <a href="/sitemap.xml" style="display: inline-flex; align-items: center;">网站地图</a>
+//     <span>•</span>
+// <a href="/feed.xml" style="display: inline-flex; align-items: center;">RSS 订阅</a>
+// <span>•</span>
+// <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备12345678号</a>
+//     </div>
         footer: {
             // 版权前显示的信息
-            message: `
-                <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
-                  <span>基于 VitePress 构建</span>
-                  <span>•</span>
-                  <a href="/sitemap.xml" style="display: inline-flex; align-items: center;">网站地图</a>
-                  <span>•</span>
-                  <a href="/feed.xml" style="display: inline-flex; align-items: center;">RSS 订阅</a>
-                  <span>•</span>
-                  <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备12345678号</a>
-<!--                        总访问量 <span id="busuanzi_value_site_pv">&#45;&#45;</span> 次-->
-<!--                        <img src="heart.gif" alt="heart" width="10" height="10" />-->
-<!--                        访客数 <span id="busuanzi_value_site_uv">&#45;&#45;</span> 人次-->
-                </div>
-              `,
+            message: ` 总访问量 <span id="busuanzi_value_site_pv">--</span> 次
+                        <img src="heart.gif" alt="heart" width="10" height="10" />
+                        访客数 <span id="busuanzi_value_site_uv">--</span> 人次 `,
             // 实际的版权文本
             copyright: `Copyright © 2025 677. All Rights Reserved.`
         },
@@ -181,10 +179,10 @@ const vitePressOptions = {
          * 类型：EditLink
          * 每个页面可以通过 frontmatter 覆盖
          */
-        editLink: {
-            pattern: '',
-            text: '编辑此页面'
-        },
+        // editLink: {
+        //     pattern: '',
+        //     text: '编辑此页面'
+        // },
 
         /**
          * 允许自定义上次更新的文本和日期格式。
