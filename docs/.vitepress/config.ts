@@ -47,8 +47,8 @@ export default defineConfig({
     // 站点的 lang 属性。这将呈现为页面 HTML 中的 <html lang="en-US"> 标签。
     lang: "zh-CN",
     // 默认值： /,计划在子路径部署就需要改这个为子路径目录,始终以 / 开头和结尾
-    base: "/",
-    // base: "/677blog/",
+    // base: "/",
+    base: "/677blog/",
     /**
      * 路由
      */
