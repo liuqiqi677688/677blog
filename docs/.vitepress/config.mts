@@ -168,14 +168,9 @@ const vitePressOptions = {
 <!--                  <span>•</span>-->
 <!--                  <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备12345678号</a>-->
 
-                        <span class="text">
-                        总访问量 <span id="busuanzi_value_site_pv" class="font-bold">--</span> 次
-                        </span>
+                        总访问量 <span id="busuanzi_value_site_pv">--</span> 次
                         <img src="heart.gif" alt="heart" width="10" height="10" />
-                        <span class="text">
-                        访客数 <span id="busuanzi_value_site_uv" class="font-bold">--</span> 人次
-                        </span>
-                  <DataPanel />
+                        访客数 <span id="busuanzi_value_site_uv">--</span> 人次
                 </div>
               `,
             // 实际的版权文本
