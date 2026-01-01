@@ -110,7 +110,7 @@ export const teekConfig = defineTeekConfig({
     // 文章默认的作者信息
     author: {
         name: "677", // 作者名称
-        link: "https://github.com/liuqiqi677688", // 点击作者名称后跳转的链接
+        link: "https://github.com/677-688", // 点击作者名称后跳转的链接
     },
     // 公告配置
     notice: {
@@ -126,11 +126,11 @@ export const teekConfig = defineTeekConfig({
         // ...
     },
     // 站点分析配置
-    siteAnalytics: [
-        {provider: "google", options: {id: "******"}},
-        {provider: "baidu", options: {id: "******"}},
-        {provider: "umami", options: {id: "******", src: "**"}},
-    ],
+    // siteAnalytics: [
+    //     {provider: "google", options: {id: "******"}},
+    //     {provider: "baidu", options: {id: "******"}},
+    //     {provider: "umami", options: {id: "******", src: "**"}},
+    // ],
     // 首页 Banner 配置，位于首页顶部
     banner: {
         enabled: true, // 是否启用 Banner
